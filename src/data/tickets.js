@@ -1,0 +1,17 @@
+export const tickets = [
+  { id: 1, title: "Login Issue", description: "Can't access account", customer: "John Doe", priority: "High", status: "Open", createdAt: "2025-09-25" },
+  { id: 2, title: "Payment Failed", description: "Card declined", customer: "Jane Smith", priority: "Medium", status: "Open", createdAt: "2025-09-24" },
+  { id: 3, title: "Profile Update", description: "Unable to update profile picture", customer: "Alice Johnson", priority: "Low", status: "Open", createdAt: "2025-09-23" },
+  { id: 4, title: "Password Reset", description: "Reset link not working", customer: "Bob Brown", priority: "High", status: "Open", createdAt: "2025-09-22" },
+  { id: 5, title: "App Crash", description: "App crashes on launch", customer: "Charlie Davis", priority: "High", status: "Open", createdAt: "2025-09-21" },
+  { id: 6, title: "Notification Issue", description: "Not receiving notifications", customer: "Diana Evans", priority: "Medium", status: "Open", createdAt: "2025-09-20" },
+  { id: 7, title: "Slow Loading", description: "Dashboard takes long to load", customer: "Frank Green", priority: "Low", status: "Open", createdAt: "2025-09-19" },
+  { id: 8, title: "Subscription Error", description: "Unable to upgrade plan", customer: "Grace Hall", priority: "High", status: "Open", createdAt: "2025-09-18" },
+  { id: 9, title: "Data Sync Failed", description: "Data not syncing between devices", customer: "Henry Ives", priority: "Medium", status: "Open", createdAt: "2025-09-17" },
+  { id: 10, title: "Bug Report", description: "Found a bug in report generation", customer: "Isla Jones", priority: "Low", status: "Open", createdAt: "2025-09-16" },
+  { id: 11, title: "Export PDF Error", description: "PDF export fails", customer: "Jack King", priority: "Medium", status: "Open", createdAt: "2025-09-15" },
+  { id: 12, title: "Login Timeout", description: "Session expires too quickly", customer: "Kelly Lee", priority: "Low", status: "Open", createdAt: "2025-09-14" },
+  { id: 13, title: "Search Not Working", description: "Cannot find items in search", customer: "Liam Miller", priority: "Medium", status: "Open", createdAt: "2025-09-13" },
+  { id: 14, title: "UI Glitch", description: "Buttons overlap on mobile view", customer: "Mia Nelson", priority: "Low", status: "Open", createdAt: "2025-09-12" },
+  { id: 15, title: "Email Not Sent", description: "Confirmation emails not received", customer: "Noah Owens", priority: "High", status: "Open", createdAt: "2025-09-11" },
+];
