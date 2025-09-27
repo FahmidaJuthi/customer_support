@@ -1,28 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+import { HiMenu, HiX } from "react-icons/hi";
 
 export default function Navbar() {
-  return (
-    <nav className="flex justify-between items-center p-2 bg-white ">
-      {/* Logo / Brand */}
-      <h1 className="font-bold text-gray-800 text-lg">CS — Ticket System</h1>
+  const [isMenu, setIsMenu] = useState(false);
 
-      {/* Right Side: Menu + Button */}
-      <div className="flex items-center gap-6">
-        {/* Menu Items */}
-        <ul className="flex gap-4 text-gray-700 font-medium">
-          <li><a href="#" className="hover:text-purple-600 transition">Home</a></li>
-          <li><a href="#" className="hover:text-purple-600 transition">FAQ</a></li>
-          <li><a href="#" className="hover:text-purple-600 transition">Changelog</a></li>
-          <li><a href="#" className="hover:text-purple-600 transition">Blog</a></li>
-          <li><a href="#" className="hover:text-purple-600 transition">Download</a></li>
-          <li><a href="#" className="hover:text-purple-600 transition">Contact</a></li>
+  const toggleMenu = () => setIsMenu(!isMenu);
+
+  return (
+    <nav className="">
+      <div className="flex justify-between items-center p-2">
+        <h1 className="font-bold text-gray-800 text-lg">CS — Ticket System</h1>
+        <div className="flex items-center gap-6">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-6">
+          <li className="hover:text-blue-500 cursor-pointer">Home</li>
+          <li className="hover:text-blue-500 cursor-pointer">Tickets</li>
+          <li className="hover:text-blue-500 cursor-pointer">Analytics</li>
+          <li className="hover:text-blue-500 cursor-pointer">Reports</li>
+          <li className="hover:text-blue-500 cursor-pointer">Settings</li>
         </ul>
 
-        {/* New Ticket Button */}
-        <button className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white px-4 py-2 cursor-crosshair rounded hover:opacity-90 transition">
-          + New Ticket
+        <button className="hidden md:block bg-blue-500 text-white px-4 py-2 rounded">
+          New Ticket
+        </button>
+
+        {/* Mobile Hamburger */}
+        <button
+          className="md:hidden text-2xl focus:outline-none"
+          onClick={toggleMenu}
+        >
+          {isMenu ? <HiX /> : <HiMenu />}
         </button>
       </div>
+
+      {/* Mobile Menu */}
+      {isMenu && (
+        <ul className="flex flex-col mt-4 gap-4 md:hidden">
+          <li className="hover:text-blue-500 cursor-pointer">Home</li>
+          <li className="hover:text-blue-500 cursor-pointer">Tickets</li>
+          <li className="hover:text-blue-500 cursor-pointer">Analytics</li>
+          <li className="hover:text-blue-500 cursor-pointer">Reports</li>
+          <li className="hover:text-blue-500 cursor-pointer">Settings</li>
+          <button className="bg-blue-500 text-white px-4 py-2 rounded mt-2">
+            New Ticket
+          </button>
+        </ul>
+      )}
+      </div>
+
     </nav>
   );
 }
